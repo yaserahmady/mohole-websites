@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "watch-js": "webpack --config './config/webpack.dev.js' --mode development --watch",
+    "build-js": "webpack --config './config/webpack.prod.js' --mode production",
+    "watch-css": "postcss './src/css/style.css' --config='./config/postcss.config.js' --verbose --output './dist/style.css' --watch",
+    "build-css": "postcss './src/css/style.css' --config='./config/postcss.config.js' --verbose --output './dist/style.css' --minify --env 'production'",
+    "watch": "concurrently \"npm:watch-*\"",
+    "build": "concurrently \"npm:build-*\""
+  },
+  "dependencies": {
+    "alpinejs": "^3.12.2",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.3.2",
+    "three": "^0.153.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
