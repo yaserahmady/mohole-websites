@@ -9,49 +9,6 @@
     />
 
     <title>Mohole WEB1A 2022/2023</title>
-
-    <!-- Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- https://tailwindcss.com/docs/installation/play-cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["DM Sans", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      @layer base {
-        html {
-          font-family: "DM Sans", system-ui, sans-serif;
-        }
-      }
-
-      :root {
-        --swiper-theme-color: #fda4af;
-      }
-    </style>
-
-    <!-- Scripts -->
-    <!-- https://alpinejs.dev/start-here -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
     <script src="//unpkg.com/alpinejs" defer></script>
     <script>
       window.app = () => {
@@ -64,52 +21,31 @@
               .then((response) => response.json())
               .then((data) => {
                 this.students = data;
-                this.initCarousel();
+                this.students = this.students.filter(
+                  (student) => student.website !== ""
+                );
+                console.log(this.students.length);
               });
           },
-          initCarousel() {
-            const swiper = new Swiper(".swiper", {
-              // Optional parameters
-              direction: "horizontal",
-              loop: true,
-              // Navigation arrows
-              navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              },
-            });
-          },
+          initCarousel() {},
         };
       };
     </script>
+    <link rel="stylesheet" href="./dist/style.css" />
   </head>
 
-  <body class="bg-rose-200 overflow-x-hidden" x-data="app()">
-    <div class="w-screen h-screen py-8 flex items-center justify-center">
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper flex">
-          <!-- Slides -->
-          <template x-for="student in students">
-            <div
-              class="swiper-slide py-16 w-full flex items-center justify-center overflow-visible"
-            >
-              <a
-                :href="student.website"
-                class="bg-white shadow-xl shadow-rose-400/30 w-[600px] h-[300px] rounded-xl p-4"
-              >
-                <h2 x-text="`${student.name} ${student.surname}`"></h2>
-              </a>
-            </div>
-          </template>
-        </div>
-        <!-- If we need pagination -->
-        <!-- <div class="swiper-pagination"></div> -->
+  <body class="overflow-x-hidden select-none" x-data="app()">
+    <header
+      class="absolute top-8 left-0 right-0 flex flex-col space-y-2 items-center px-4 py-2"
+    >
+      <p class="text-xl">
+        SITI PERSONALI DELLƏ STUDENTƏ DEL CORSO DI WEB A MOHOLE
+      </p>
+      <h1 class="fit uppercase transform leading-none">Mohole</h1>
+    </header>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </div>
+    <div id="container" class="w-full h-full"></div>
+
+    <script src="./dist/main.js"></script>
   </body>
 </html>
