@@ -17,7 +17,7 @@ const body = document.getElementsByTagName("body")[0];
 const elem = document.documentElement;
 
 // Number of cards
-const numCards = 10;
+const numCards = 11;
 
 // Distance between each card
 const distance = 600;
