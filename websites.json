@@ -2,17 +2,20 @@
   {
     "name": "Massinissa",
     "surname": "Allam",
-    "website": "https://massiallam.com/"
+    "website": "https://massiallam.com/",
+    "image": "massiallam.com.webp"
   },
   {
     "name": "Fabio",
     "surname": "Bonetti",
-    "website": "https://fabiobonetti.com/"
+    "website": "https://fabiobonetti.com/",
+    "image": "fabiobonetti.com.webp"
   },
   {
     "name": "Patricia",
     "surname": "Caballes",
-    "website": "https://patriciacaballes.com/"
+    "website": "https://patriciacaballes.com/",
+    "image": "patriciacaballes.com.webp"
   },
   {
     "name": "Vittorio",
@@ -22,7 +25,8 @@
   {
     "name": "Margherita",
     "surname": "Folegatti",
-    "website": "https://margheritafolegatti.com/"
+    "website": "https://margheritafolegatti.com/",
+    "image": "margheritafolegatti.com.webp"
   },
   {
     "name": "Giacomo",
@@ -32,17 +36,20 @@
   {
     "name": "Orlando",
     "surname": "Iannarone",
-    "website": "https://orlandoiannarone.com/"
+    "website": "https://orlandoiannarone.com/",
+    "image": "orlandoiannarone.com.webp"
   },
   {
     "name": "Jether Rey",
     "surname": "Pagaduan",
-    "website": "https://jetherey.com/"
+    "website": "https://jetherey.com/",
+    "image": "jetherey.com.webp"
   },
   {
     "name": "Gianluca",
     "surname": "Prodigo",
-    "website": "https://gianlucaprodigo.com/"
+    "website": "https://gianlucaprodigo.com/",
+    "image": "gianlucaprodigo.com.webp"
   },
   {
     "name": "Alessandro",
@@ -57,12 +64,14 @@
   {
     "name": "Marco",
     "surname": "Sommaruga",
-    "website": "https://marcosommaruga.com/"
+    "website": "https://marcosommaruga.com/",
+    "image": "marcosommaruga.com.webp"
   },
   {
     "name": "John Marco",
     "surname": "Tolentino",
-    "website": "https://johnmarcotolentino.com/"
+    "website": "https://johnmarcotolentino.com/",
+    "image": "johnmarcotolentino.com.webp"
   },
   {
     "name": "Riccardo",
@@ -72,6 +81,7 @@
   {
     "name": "Xian ni Jessica",
     "surname": "Zhu",
-    "website": "https://xiannizhu.com/"
+    "website": "https://xiannizhu.com/",
+    "image": "xiannizhu.com.webp"
   }
 ]

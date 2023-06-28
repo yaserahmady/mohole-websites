@@ -54,7 +54,7 @@ function createCardElement(index) {
   element.setAttribute(":href", `students[${index}].website`);
   element.setAttribute("target", "_blank");
   element.innerHTML = `
-    <img draggable="false" class="w-full h-auto bg-[var(--fg)]" :src="'https://image.thum.io/get/maxAge/1/width/600/crop/800/' + students[${index}].website" width="600" height="400">
+    <img draggable="false" class="w-full h-auto bg-[var(--fg)]" :src="'./images/' + students[${index}].image" width="600" height="400">
     <div class="px-2 py-1">
       <h2 x-text="students[${index}].name + ' ' + students[${index}].surname"></h2>
     </div>
